@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.title {
+    color: white;
+    margin-left: 50px;
+    flex: 40%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#divBusca {
+    background-color: white;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    margin-right: 50px;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 260px;
+    color: black;
+    caret-color: black;
+}
+
+#btnBusca {
+    float: left;
+    width: 40px;
+    height: 32px;
+    color: black;
+    cursor: pointer;
+}
+
+#txtBusca::placeholder {
+    color: black;
+    opacity: 0.5;
+
+}
+
+main {
+    display: flex;
+    margin-top: 2px;
+
+}
+
+.camisas {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-left: 5px;
+}
+
+.camisas section {
+    text-align: center;
+    padding: 20;
+
+}
+
+.camisas img {
+    width: 200px;
+}
+
+.menuLateral {
+    background-color: black;
+    color: white;
+    flex: 5%;
+    display: grid;
+}
+
+.menuLateral input[type="checkbox"] {
+    margin-bottom: 2px;
+}
+
+
+.menuLateral input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.menuLateral input[type="checkbox"]:checked::before {
+    content: "\2713";
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.container {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-color: lightgray;
+}
+
+.container button{
+background-color: black;
+color: white;
+border: none;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none; 
+}
+header a{
+color: white;
+margin-right: 30px;
+}
+.Icons {
+    font-family: 'Material Icons', sans-serif;
+    font-size: 24px;
+}
+@media screen and (max-width: 1024px) {
+    .camisas{
+        grid-template-columns: none;
+    }
+    main{
+        display: grid;
+    }
+}
